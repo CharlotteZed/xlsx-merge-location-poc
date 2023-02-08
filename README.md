@@ -1,2 +1,3 @@
-# xlsx-merge-location-poc
-typescript node program which takes as argument the path to an ooxml spreadsheet and prints as output the locations of all merged cells
+The program runs with "ts-node index.ts [xlsx path]", and prints out, sheet by sheet, a list of merged cell locations in standard excel cell range format (that is, for a rectangle stretching from A2 to C4, it prints out A2:C4 to denote that range).
+
+Credit where credit is due, in addition to an excel parsing library acquired through node, I have borrowed a small (and very pretty) utility function for converting integers to excel column names (which cannot be done with a simple character casting with offset thanks to double alphabetic column names such as AA, AB, and so forth) from one Chris West.
